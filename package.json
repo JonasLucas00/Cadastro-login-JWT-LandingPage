@@ -1,0 +1,24 @@
+{
+  "name": "projeto-form-validator",
+  "version": "1.0.0",
+  "description": "Formulário de cadastro e login\r - Ao ser efetuado login, gerar token JWT\r - Com JWT token, usuário logado pode acessar as paginas protegidas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "sequelize": "^6.37.7",
+    "sequelize-cli": "^6.6.3",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
