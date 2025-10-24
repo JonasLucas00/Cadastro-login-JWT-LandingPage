@@ -1,3 +1,5 @@
+const bcrypt = require('bcrypt');
+
 'use strict';
 const {
   Model
@@ -12,6 +14,11 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
     }
+
+    async passValidate(input_password) {
+      return await bcrypt.compare(input_password, this.password);
+    }
+
   }
   Users.init({
     email: {
@@ -19,14 +26,32 @@ module.exports = (sequelize, DataTypes) => {
       unique: {
         msg: 'Email já cadastrado'
       },
-      allowNull: false
+      allowNull: false,
+      validate: {
+        isEmail: {
+          msg: 'Email invalido'
+        }
+      }
     },
     password: {
       type: DataTypes.STRING
+    },
+    input_password: {
+      type: DataTypes.VIRTUAL,
+
     }
   }, {
     sequelize,
     modelName: 'Users',
   });
+
+  Users.addHook('beforeSave', async (user) => {
+    if (user.input_password) {
+      user.password = await bcrypt.hash(user.input_password, 8)
+    }
+  })
+
+
+
   return Users;
 };

@@ -10,7 +10,7 @@ app.use(express.json());
 
 app.use('/', homeRouter);
 app.use('/login', loginRouter);
-app.use('/register', registerRouter);
+app.use('/users', registerRouter);
 
 
 app.listen(process.env.PORT, () => {
