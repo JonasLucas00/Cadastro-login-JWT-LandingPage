@@ -1,9 +1,12 @@
 const jwt = require('jsonwebtoken');
 const { Users } = require('../models');
 require('dotenv').config();
-const bcrypt = require('bcrypt');
 
 class LoginController {
+
+    renderLogin(req, res) {
+
+    }
 
     async login(req, res) {
         // console.log(Users.passValidate(req.body.input_password))

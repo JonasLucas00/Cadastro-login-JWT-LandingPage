@@ -31,6 +31,9 @@ module.exports = (sequelize, DataTypes) => {
         isEmail: {
           msg: 'Email invalido'
         }
+      },
+      set(value) {
+        this.setDataValue('email', value.toLowerCase());
       }
     },
     password: {
@@ -38,6 +41,9 @@ module.exports = (sequelize, DataTypes) => {
     },
     input_password: {
       type: DataTypes.VIRTUAL,
+      set(value) {
+        this.setDataValue('input_password', value.toLowerCase());
+      }
 
     }
   }, {

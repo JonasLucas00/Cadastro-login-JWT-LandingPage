@@ -1,4 +1,3 @@
-const { where } = require('sequelize');
 const { Users } = require('../models');
 
 class Register {
@@ -7,7 +6,7 @@ class Register {
         if (!req.body) {
             return res.json('sem parametros');
         }
-
+        console.log(req.body)
         try {
             const user = await Users.create({
                 email: req.body.email,

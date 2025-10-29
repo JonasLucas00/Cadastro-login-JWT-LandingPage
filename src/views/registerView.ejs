@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="register-container">
+        <div class="form-register">
+            <form action="/register" method="post">
+                <h3>Parece que você não tem uma conta</h3>
+
+                <p>Vamos criar uma conta usando seu e-mail?</p>
+
+                <p>
+                    <%=email%>
+                </p>
+                <div class="input-register">
+                    <label for="password">Crie uma senha</label>
+                    <input type="text" name="password">
+                    <input type="hidden" value="<%=email%>" name="email">
+                    <button type="submit">Criar conta</button>
+                </div>
+
+                <div class="isClient">
+                    <h4>Já é cliente?</h4>
+                    <a href="/register">Faça login com outro e-mail</a>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</body>
+
+</html>
