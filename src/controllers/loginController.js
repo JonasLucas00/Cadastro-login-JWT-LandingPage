@@ -31,10 +31,18 @@ class LoginController {
             const token = jwt.sign(
                 { email: req.body.email, password: req.body.password },
                 process.env.TOKEN_SECRET,
-                { expiresIn: '1d' }
+                { expiresIn: '2h' }
             )
             console.log(token)
-            return res.json({ token: token })
+
+            res.cookie("token", token, {
+                httpOnly: true,
+                secure: true,      // true em produção (HTTPS)
+                sameSite: "strict", // previne CSRF
+                maxAge: 2 * 60 * 60 * 1000
+            });
+
+            return res.redirect('/protected')
 
         } catch (error) {
             console.log(error);

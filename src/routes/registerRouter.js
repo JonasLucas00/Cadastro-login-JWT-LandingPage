@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const RegisterContoller = require('../controllers/registerController.js');
-const jwtAuthMiddleware = require('../Middlewares/jwtMiddlware.js');
 
 // router.get('/', RegisterContoller.renderRegister)
 // router.post('/show', RegisterContoller.show);
