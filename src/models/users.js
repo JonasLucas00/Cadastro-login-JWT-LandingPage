@@ -40,11 +40,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING
     },
     input_password: {
-      type: DataTypes.VIRTUAL,
-      set(value) {
-        this.setDataValue('input_password', value.toLowerCase());
-      }
-
+      type: DataTypes.VIRTUAL
     }
   }, {
     sequelize,

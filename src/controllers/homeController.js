@@ -7,7 +7,7 @@ class HomeController {
     }
 
     async show(req, res) {
-        console.log(req.body.email)
+        console.log(`home-Show ${req.body.email}`)
         const { email } = req.body
         try {
             const user = await Users.findOne({ where: { email: email.toLowerCase() } });

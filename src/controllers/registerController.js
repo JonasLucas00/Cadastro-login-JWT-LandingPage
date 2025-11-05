@@ -6,11 +6,15 @@ class Register {
         if (!req.body) {
             return res.json('sem parametros');
         }
+
+        if (req.body.input_password.length < 6 || typeof req.body.input_password !== 'string') {
+            return res.json('Verifique a senha')
+        }
         console.log(req.body)
         try {
             const user = await Users.create({
                 email: req.body.email,
-                input_password: req.body.password
+                input_password: req.body.input_password
             })
             console.log(`usuario adicionado ${JSON.stringify(user)}`);
 

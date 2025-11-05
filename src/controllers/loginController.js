@@ -4,14 +4,16 @@ require('dotenv').config();
 
 class LoginController {
 
-    renderLogin(req, res) {
-
-    }
 
     async login(req, res) {
-        // console.log(Users.passValidate(req.body.input_password))
-        if (!req.body) {
-            return res.json('Sem parametros')
+        console.log(req.body.input_password);
+
+        if (!req.body.input_password || !req.body.email) {
+            return res.json('Preencha todos os campos')
+        }
+
+        if (req.body.input_password.length < 6 || typeof req.body.input_password !== 'string') {
+            return res.json('Verifique a senha')
         }
 
         try {
