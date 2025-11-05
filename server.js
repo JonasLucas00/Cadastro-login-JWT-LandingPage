@@ -5,8 +5,9 @@ const homeRouter = require('./src/routes/homeRouter.js');
 const loginRouter = require('./src/routes/loginRouter.js');
 const registerRouter = require('./src/routes/registerRouter.js');
 const protectedRouter = require('./src/routes/protectedRouter.js');
-const viewConfig = require('./src/config/viewsConfig.js')
-const cookieParser = require('cookie-parser')
+const logoutRouter = require('./src/routes/logoutRouter.js');
+const viewConfig = require('./src/config/viewsConfig.js');
+const cookieParser = require('cookie-parser');
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -15,6 +16,7 @@ viewConfig(app);
 
 app.use('/', homeRouter);
 app.use('/login', loginRouter);
+app.use('/logout', logoutRouter);
 app.use('/register', registerRouter);
 app.use('/protected', protectedRouter);
 

@@ -1,6 +1,6 @@
 class ProtectedController {
     renderProtected(req, res) {
-        res.json('Rota Protected');
+        res.render('protected');
     }
 }
 
