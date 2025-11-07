@@ -14,11 +14,11 @@ app.use(express.json());
 app.use(cookieParser());
 viewConfig(app);
 
-app.use('/', userForm);
+app.use('/', homeRouter);
+app.use('/form', userForm);
 app.use('/login', loginRouter);
 app.use('/logout', logoutRouter);
 app.use('/register', registerRouter);
-app.use('/home', homeRouter);
 
 
 app.listen(process.env.PORT, () => {

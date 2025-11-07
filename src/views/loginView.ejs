@@ -23,7 +23,12 @@
                     <input type="hidden" value="<%=email%>" name="email">
                 </div>
 
-                <button type="submit">Fazer login</button>
+                <%if(typeof errMsg !=='undefined' && errMsg){%>
+                    <p>
+                        <%=errMsg%>
+                    </p>
+                    <%}%>
+                        <button type="submit">Fazer login</button>
             </form>
 
         </div>

@@ -13,7 +13,7 @@
         <p>Insira seu e-mail abaixo</p>
 
         <div class="home-form">
-            <form action="/show" method="post">
+            <form action="/form/show" method="post">
 
                 <div class="inputs-home">
                     <label for="email">email</label>
@@ -22,6 +22,18 @@
                     <input type="text" name="password"> -->
                 </div>
                 <button type="submit" class="register-btn">Continuar</button>
+
+                <%if(typeof errMsg !=='undefined' && errMsg){%>
+                    <p style="color:red">
+                        <%=errMsg%>
+                    </p>
+                    <% }%>
+
+                        <%if(message){%>
+                            <p style="color:red">
+                                <%=message%>
+                            </p>
+                            <% }%>
             </form>
         </div>
     </div>

@@ -7,5 +7,5 @@ module.exports.logout = function (req, res) {
         path: '/'         // mesmo path/domain usado ao criar
     });
 
-    return res.json({ message: 'Deslogado com sucesso' });
+    return res.render('UserForm', { message: 'Usuario deslogado' });
 }

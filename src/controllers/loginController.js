@@ -4,6 +4,9 @@ require('dotenv').config();
 
 class LoginController {
 
+    renderLogin(req, res) {
+        res.render('loginView', { errMsg: req.query.errMsg })
+    }
 
     async login(req, res) {
         console.log(req.body.input_password);
@@ -13,7 +16,8 @@ class LoginController {
         }
 
         if (req.body.input_password.length < 6 || typeof req.body.input_password !== 'string') {
-            return res.json('Verifique a senha')
+
+            return res.render('loginView', { errMsg: 'Verifique a senha', email: req.body.email });
         }
 
         try {
@@ -25,7 +29,7 @@ class LoginController {
 
             const match = await user.passValidate(req.body.input_password)
             if (!match) {
-                return res.json('Verifique a senha!');
+                return res.render('loginView', { errMsg: 'Verifique a senha', email: req.body.email });
             }
 
             const token = jwt.sign(

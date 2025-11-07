@@ -3,7 +3,7 @@ const { Users } = require('../models')
 class UserController {
 
     renderHome(req, res) {
-        res.render('userForm');
+        res.render('UserForm', { errMsg: '' });
     }
 
     async show(req, res) {
@@ -15,6 +15,7 @@ class UserController {
                 return res.render('registerView', { email });
             }
             return res.render('loginView', { email })
+            // return res.redirect('/login/home?errMsg=Verifique%campo%senha&email')
         } catch (error) {
             console.log(error)
             return res.json('Erro show')
