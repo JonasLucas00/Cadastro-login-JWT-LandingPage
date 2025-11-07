@@ -1,10 +1,8 @@
 const express = require('express');
-const router = express.Router();
+const router = express.Router()
 const HomeController = require('../controllers/homeController.js');
-const emailValidate = require('../Middlewares/emailValidation.js');
+const authMiddleware = require('../Middlewares/authMiddlware.js');
 
-router.get('/', HomeController.renderHome);
-router.post('/show', emailValidate, HomeController.show);
-
+router.get('/', authMiddleware, HomeController.renderHome);
 
 module.exports = router;

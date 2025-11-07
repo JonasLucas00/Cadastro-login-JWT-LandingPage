@@ -42,7 +42,7 @@ class LoginController {
                 maxAge: 2 * 60 * 60 * 1000
             });
 
-            return res.render('protected')
+            return res.render('home')
 
         } catch (error) {
             console.log(error);
