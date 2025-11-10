@@ -14,14 +14,18 @@ function jwtAuth(req, res, next) {
         token = req.cookies.token;
     }
     if (!token) {
-        return res.status(401).json({ error: 'Token não enviado' });
+        // return res.status(401).json({ error: 'Token não enviado' });
+        console.log('Token não enviado')
+        return res.render('UserForm', { errMsg: 'Faça login para acesssar a pagina' })
     }
     try {
         const decoded = jwt.verify(token, process.env.TOKEN_SECRET);
         req.email = decoded.email;
         next();
     } catch (err) {
-        return res.status(401).json({ error: 'Token inválido ou expirado' });
+        // return res.status(401).json({ error: 'Token inválido ou expirado' });
+        console.log('Token inválido ou expirado')
+        return res.render('UserForm', { errMsg: 'Faça login para acesssar a pagina' })
     }
 }
 
