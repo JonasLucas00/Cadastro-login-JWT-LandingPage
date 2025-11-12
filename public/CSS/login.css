@@ -1,0 +1,72 @@
+.form-login {
+    background-color: #1E3A8A;
+    min-width: 300px;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid black;
+    transform: translateY(-180px);
+}
+
+.form-login h3 {
+    transform: translateY(-20px);
+    font-size: 20px;
+    margin: 10px;
+    padding: 10px;
+    color: rgba(245, 245, 245, 0.726)
+}
+
+.insert-email {
+    transform: translateY(-20px);
+    font-size: 18px;
+    margin: 10px;
+    padding: 10px;
+    color: rgba(245, 245, 245, 0.726)
+}
+
+.input-login {
+    transform: translateY(-10px);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-login label {
+    transform: translateY(-10px);
+    color: rgba(245, 245, 245, 0.726)
+}
+
+.input-login button,
+.input-login input {
+    width: 200px;
+    height: 27px;
+    background-color: #F9FAFB;
+    border: 1px solid #CBD5E1;
+    transform: translateY(-10px);
+}
+
+.input-login input {
+    border-radius: 8px;
+}
+
+.input-login button {
+    border-radius: 14px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+
+.errMsg p {
+    color: #DC2626;
+}
+
+.input-login button:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}

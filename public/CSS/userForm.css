@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    /* width: 100vh; */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.UserForm-container {
+    background-color: #1E3A8A;
+    min-width: 300px;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid black;
+    transform: translateY(-180px);
+}
+
+.UserForm-container h1 {
+    transform: translateY(-10px);
+    font-size: 30px;
+    margin: 10px;
+    padding: 10px;
+    color: rgba(245, 245, 245, 0.726)
+}
+
+.UserForm-container p {
+    transform: translateY(-30px);
+    font-size: 18px;
+    margin: 10px;
+    padding: 10px;
+    color: rgba(245, 245, 245, 0.726)
+}
+
+.UserForm-form {
+    /* background-color: rgb(140, 0, 255); */
+}
+
+.email-input-userForm {
+    border-radius: 8px;
+    font-size: 15px;
+    transform: translateY(-30px);
+}
+
+.inputs-UserForm {
+    transform: translateY(-10px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.email-input-userForm,
+.register-btn {
+    width: 300px;
+    height: 30px;
+    background-color: #F9FAFB;
+    border: 1px solid #CBD5E1;
+}
+
+.register-btn {
+    /* width: 80px; */
+    transform: translateY(-40px);
+    border-radius: 14px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.register-btn:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.msgErr p {
+    transform: translateY(-35px);
+    padding: 10px;
+    color: #DC2626;
+}

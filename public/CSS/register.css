@@ -1,0 +1,42 @@
+.register-container {
+    background-color: #1E3A8A;
+    min-width: 350px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid black;
+    transform: translateY(-180px);
+}
+
+.titles-container {
+    color: rgba(245, 245, 245, 0.726);
+}
+
+.input-register {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-register input {
+    border-radius: 8px;
+}
+
+.input-register button {
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.input-register button:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+
+.linkChangeEmail-container a {
+    text-decoration: none;
+    color: rgba(245, 245, 245, 0.726);
+}
