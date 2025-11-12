@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/CSS/global.css">
+    <link rel="stylesheet" href="/CSS/register.css">
 </head>
 
 <body>
@@ -12,23 +14,34 @@
     <div class="register-container">
         <div class="form-register">
             <form action="/register" method="post">
-                <h3>Parece que você não tem uma conta</h3>
+                <div class="titles-container">
+                    <h3>Parece que você não tem uma conta</h3>
 
-                <p>Vamos criar uma conta usando seu e-mail?</p>
+                    <p>Vamos criar uma conta usando seu e-mail?</p>
 
-                <p>
-                    <%=email%>
-                </p>
+                    <p>
+                        <%=email%>
+                    </p>
+                </div>
+
                 <div class="input-register">
-                    <label for="password">Crie uma senha</label>
+                    <label for="password"><strong>Crie uma senha</strong></label>
                     <input type="password" name="input_password">
                     <input type="hidden" value="<%=email%>" name="email">
                     <button type="submit">Criar conta</button>
                 </div>
 
-                <div class="isClient">
+                <div class="errMsg">
+                    <%if(typeof errMsg !=='undefined' && errMsg){%>
+                        <p style="color: red;">
+                            <%=errMsg%>
+                        </p>
+                        <%}%>
+                </div>
+
+                <div class="linkChangeEmail-container">
                     <h4>Já é cliente?</h4>
-                    <a href="/register">Faça login com outro e-mail</a>
+                    <a href="/form">Faça login com outro e-mail</a>
                 </div>
             </form>
 

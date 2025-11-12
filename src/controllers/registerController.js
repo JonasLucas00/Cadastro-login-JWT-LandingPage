@@ -8,7 +8,7 @@ class Register {
         }
 
         if (req.body.input_password.length < 6 || typeof req.body.input_password !== 'string') {
-            return res.json('Verifique a senha')
+            return res.render('registerView', { errMsg: 'Verifique a senha', email: req.body.email })
         }
         console.log(req.body)
         try {
@@ -18,10 +18,10 @@ class Register {
             })
             console.log(`usuario adicionado ${JSON.stringify(user)}`);
 
-            return res.json('Usuario criado')
+            return res.render('loginView', { email: req.body.email, message: 'Usuario criado! Efetue login acima' })
         } catch (error) {
-            console.log(error);
-            return res.json(`Register-store ERRO`);
+            console.log(`Register-store ${ERRO}`);
+            return res.render('registerView', { errMsg: 'Verifique a senha', email: req.body.email })
         }
 
     }

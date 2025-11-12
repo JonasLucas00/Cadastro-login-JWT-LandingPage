@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path')
 const app = express();
 require('dotenv').config();
 const userForm = require('./src/routes/userFormRouter.js');
@@ -14,7 +15,7 @@ app.use(express.json());
 app.use(cookieParser());
 viewConfig(app);
 
-app.use(express.static('/public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', homeRouter);
 app.use('/form', userForm);

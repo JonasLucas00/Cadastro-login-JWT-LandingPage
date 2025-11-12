@@ -5,35 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../../public/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/userForm.css">
 </head>
 
 <body>
-    <div class="home-container">
+    <div class="UserForm-container">
         <h1>Faça login ou crie uma conta</h1>
         <p>Insira seu e-mail abaixo</p>
 
-        <div class="home-form">
+        <div class="UserForm-form">
             <form action="/form/show" method="post">
 
-                <div class="inputs-home">
-                    <label for="email">email</label>
-                    <input type="text" name="email">
+                <div class="inputs-UserForm">
+                    <!-- <label for="email">email</label> -->
+                    <input type="text" name="email" class="email-input-userForm">
                     <!-- <label for="password">password</label>
                     <input type="text" name="password"> -->
+                    <button type="submit" class="register-btn">Continuar</button>
                 </div>
-                <button type="submit" class="register-btn">Continuar</button>
 
                 <%if(typeof errMsg !=='undefined' && errMsg){%>
-                    <p style="color:red">
-                        <%=errMsg%>
-                    </p>
+                    <div class="msgErr">
+                        <p style="color:red">
+                            <%=errMsg%>
+                        </p>
+                    </div>
                     <% }%>
 
                         <%if(typeof message !=='undefined' && message){%>
-                            <p style="color:red">
-                                <%=message%>
-                            </p>
+                            <div class="msgErr">
+                                <p style="color:red" class="msgErr">
+                                    <%=message%>
+                                </p>
+                            </div>
                             <% }%>
             </form>
         </div>

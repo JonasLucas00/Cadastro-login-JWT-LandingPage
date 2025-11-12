@@ -12,7 +12,7 @@ class LoginController {
         console.log(req.body.input_password);
 
         if (!req.body.input_password || !req.body.email) {
-            return res.json('Preencha todos os campos')
+            return res.render('loginView', { errMsg: 'Preencha todos os campos', email: req.body.email })
         }
 
         if (req.body.input_password.length < 6 || typeof req.body.input_password !== 'string') {
