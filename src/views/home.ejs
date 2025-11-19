@@ -5,18 +5,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/CSS/home.css">
 </head>
 
 <body>
-    <h1>Bem vindo a rota protegida!</h1>
-    <p>Olá, bem vindo a pagina Principal</p>
 
-    <div class="container-logout">
-        <form action="/logout" method="post">
-            <button type="submit">Logout</button>
-        </form>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Meu Site</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Início</a></li>
+                    <form action="/logout" method="post">
+                        <li class="nav-item"><button class="nav-link" type="submit">logout</button></li>
+                    </form>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
+    <!-- <div class="container colunas1e2"> Centraliza o conteúdo
+        <div class="row rowColunas-1e2"> 
+            <div class="col-6 bg-primary text-white coluna1">
+                <h1>Bem vindo a pagina principal</h1>
+                
+            </div>
+            <div class="col-6 text-white div-coluna2">Coluna 2 (8/12)</div>
+        </div>
+    </div> -->
+
+    <div class="containerHome">
+        <div class="container colunas1e2"> <!-- Centraliza o conteúdo -->
+            <div class="row rowColunas-1e2"> <!-- Cria uma linha -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <h1>Bem vindo a pagina principal</h1>
+                    <p>Verifique as features que temos a oferecer!</p>
+                </div>
+            </div>
+        </div>
     </div>
+
+
+    <!-- <div class="col-12 col-md-6 col-lg-4">Coluna adaptável</div> -->
+
+
+
 
 </body>
 

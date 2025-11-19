@@ -16,7 +16,7 @@ app.use(cookieParser());
 viewConfig(app);
 
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use('/bootstrap', express.static(path.join(__dirname, 'node_modules/bootstrap/dist')))
 app.use('/', homeRouter);
 app.use('/form', userForm);
 app.use('/login', loginRouter);

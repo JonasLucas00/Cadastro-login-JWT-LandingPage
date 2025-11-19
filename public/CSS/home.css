@@ -1,0 +1,22 @@
+body {
+    background-image: url('../images/wallace-henry-I96EK3CbE6Y-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.div-coluna2 {
+    background-color: black;
+    transform: translateY(100px);
+}
+
+.colunas1e2 {
+    transform: translateY(100px);
+    background-color: rgb(6, 120, 219);
+}
+
+.rowColunas-1e2 {
+    /* gap: 10px; */
+    /* background-color: black; */
+    height: 500px;
+}
