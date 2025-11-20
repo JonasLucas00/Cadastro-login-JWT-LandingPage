@@ -33,7 +33,7 @@ class LoginController {
             }
 
             const token = jwt.sign(
-                { email: req.body.email, password: req.body.password },
+                { email: req.body.email },
                 process.env.TOKEN_SECRET,
                 { expiresIn: '2h' }
             )

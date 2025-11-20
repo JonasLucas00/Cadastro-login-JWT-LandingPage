@@ -1,5 +1,12 @@
+body {
+    background-image: url('../images/landing-page-produtividade-financeira-fundo-01-min.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .form-login {
-    background-color: #1E3A8A;
+    background-color: rgba(33, 29, 221, 0.3);
     min-width: 300px;
     min-height: 250px;
     display: flex;
@@ -10,6 +17,7 @@
     border-radius: 10px;
     border: 1px solid black;
     transform: translateY(-180px);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .form-login h3 {

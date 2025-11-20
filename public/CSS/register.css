@@ -1,7 +1,15 @@
-.register-container {
-    background-color: #1E3A8A;
+body {
+    background-image: url('../images/landing-page-produtividade-financeira-fundo-01-min.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.form-register {
+    background-color: rgba(33, 29, 221, 0.3);
     min-width: 350px;
-    min-height: 300px;
+    min-height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,26 +17,41 @@
     align-items: center;
     border-radius: 10px;
     border: 1px solid black;
-    transform: translateY(-180px);
+    transform: translateY(-140px);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .titles-container {
     color: rgba(245, 245, 245, 0.726);
 }
 
+.titles-container h3 {
+    font-size: 30px;
+    margin: 0 20px 0 20px;
+}
+
+.titles-container p {
+    font-size: 18px;
+}
+
 .input-register {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    min-width: 360px;
 }
 
 .input-register input {
     border-radius: 8px;
+    height: 30px;
 }
 
 .input-register button {
     border-radius: 12px;
     cursor: pointer;
+    height: 30px;
+    font-size: 18px;
+    border: 0;
 }
 
 .input-register button:hover {
@@ -39,4 +62,9 @@
 .linkChangeEmail-container a {
     text-decoration: none;
     color: rgba(245, 245, 245, 0.726);
+    font-size: 18px;
+}
+
+.linkChangeEmail-container a:hover {
+    color: rgba(245, 245, 245, 0.9);
 }

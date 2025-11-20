@@ -3,20 +3,170 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-.div-coluna2 {
-    background-color: black;
-    transform: translateY(100px);
+.cabecalho-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.999);
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .colunas1e2 {
-    transform: translateY(100px);
-    background-color: rgb(6, 120, 219);
+    /* transform: translateY(100px); */
+    margin-top: 150px;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    color: aliceblue;
+    margin-bottom: 100px;
 }
 
 .rowColunas-1e2 {
-    /* gap: 10px; */
+    gap: 200px;
     /* background-color: black; */
-    height: 500px;
+    min-height: 300px;
+    margin-bottom: 100px;
+
+}
+
+.informe-promocao {
+    max-width: 400px;
+    /* transform: translateY(-40px); */
+}
+
+.informe-promocao h1 {
+    font-size: 50px;
+    text-shadow:
+        0 0 5px #6a80ff,
+        0 0 10px #6a80ff,
+        0 0 20px #6a80ff;
+
+}
+
+.informe-promocao p {
+    font-size: 25px;
+    text-shadow:
+        0 0 5px rgba(92, 90, 206, 0.7),
+        0 0 10px rgba(92, 90, 206, 0.7),
+        0 0 20px rgba(92, 90, 206, 0.7);
+
+}
+
+.informe-btn {
+    background-color: rgba(58, 74, 163, 0.6);
+    padding: 10px;
+    width: 250px;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: aliceblue;
+    border: none;
+}
+
+.informe-btn:hover {
+    background-color: rgba(58, 74, 163, 0.8);
+}
+
+.img-home {
+    /* margin-left: 350px; */
+    max-width: 400px;
+    max-height: 400px;
+}
+
+.cards-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.cards-home {
+    text-align: center;
+}
+
+.cards h3 {
+    text-shadow: 2px 2px 6px rgba(86, 26, 250, 0.5);
+}
+
+/* Remove background branco das imagens PNG */
+
+.info-cards-container {
+    margin-top: 100px;
+    /* transform: translateY(100px); */
+    /* margin-bottom: 50px; */
+}
+
+.info-cards {
+    gap: 20px;
+}
+
+.cards-info {
+    color: whitesmoke;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow:
+        0 0 5px rgba(92, 90, 206, 0.3),
+        0 0 10px rgba(92, 90, 206, 0.3),
+        0 0 20px rgba(92, 90, 206, 0.3);
+}
+
+.astronauta-png {
+    max-width: 200px;
+    max-height: 250px;
+}
+
+.foguete-png {
+    max-width: 200px;
+    max-height: 250px;
+}
+
+.moon-png {
+    max-width: 200px;
+    max-height: 250px;
+}
+
+.container-footer {
+    /* background-color: rgba(255, 255, 255, 0.3); */
+    min-height: 400px;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.cabecalho-div {
+    text-align: center;
+    font-size: 25px;
+    gap: 50px;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.div-p {
+    background-color: rgba(58, 74, 163, 0.8);
+    max-width: 250px;
+    margin-top: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.div-p p {
+    font-weight: 700;
+}
+
+.div-p:hover {
+    cursor: pointer;
+    background-color: rgba(58, 74, 163, 0.999);
+}
+
+.div-authorInfo {
+    color: aliceblue;
+    text-align: center;
+    align-items: center;
+    margin-top: 40px;
 }

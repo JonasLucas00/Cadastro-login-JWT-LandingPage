@@ -20,7 +20,7 @@ class Register {
 
             return res.render('loginView', { email: req.body.email, message: 'Usuario criado! Efetue login acima' })
         } catch (error) {
-            console.log(`Register-store ${ERRO}`);
+            console.log(`Register-store ${error}`);
             return res.render('registerView', { errMsg: 'Verifique a senha', email: req.body.email })
         }
 
