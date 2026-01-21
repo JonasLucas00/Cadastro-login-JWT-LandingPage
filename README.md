@@ -8,10 +8,10 @@ Após o login, um token JWT é gerado e armazenado, permitindo o acesso à rota 
 
 ## 🚀 Funcionalidades
 
-[x] Cadastro de usuarios
-[x] login de usuarios
-[x] Validação JWTtoken
-[x] Landing page em rota protegida
+- [x] Cadastro de usuarios
+- [x] login de usuarios
+- [x] Validação JWTtoken
+- [x] Landing page em rota protegida
 
 ## 🛠 Tecnologias utilizadas
 
@@ -49,12 +49,13 @@ cd nome-do-projeto
 npm install
 ```
 
-4. Configuro arquivo .env
+4. Configure arquivo .env
 ```bash
 JWT_SECRET=suaChaveAqui
 ```
 
-5. Execute as migrations (caso esteja usando):
+5. Execute as migrations para criar as tabelas do banco de dados:
+    - Esse projeto usa SQLite, o arquivo `databse.sqlite` será criado após a execução das migrations
 ```bash
 npx sequelize-cli db:migrate
 ```
@@ -63,6 +64,14 @@ npx sequelize-cli db:migrate
 ```bash
 npm run start
 ```
+
+7. Agora voce pode:
+    - Criar um cadastro
+    - Fazer login com seu cadastro (email e senha)
+    - Caso esteja os dados estejam corretos você vai poder acessar a pagina ficticia de um planetario
+    - É possivel fazer logout dentro da landing page do planetario no botao 'logout'
+
 # Autor
 
-Projeto desenvolvido por @lucasJonas00
+Lucas Jonas da Silva  
+GitHub: https://github.com/JonasLucas00
